@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+        content="width=device-width, intial-scale=1.0">
+        <title>Welcome Page</title>
+        <style>
+            body{
+                background-image: url("images.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        margin-right: 600px;
+        background-attachment: fixed;
+        animation-name: example;
+  animation-duration: 4s;
+      
+    }
+
+    table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 70%;
+    }
+
+    td,
+    th {
+        border: 1px solid #f9f9f9;
+        text-align: left;
+        padding: 4px;
+        font-size: 12px;
+    }
+
+    tr:nth-child(even) {
+        background-color: #fffefe;
+    }
+    .fas{
+        font-size: 40px;
+    }
+
+    #Intro1{
+     margin-top: 00px;
+    }
+    .fa-bars{
+        color: #004D99;
+    }
+
+    .glow-on-hover {
+    width: 150px;
+    height: 30px;
+    border: none;
+    outline: none;
+    color: rgb(25, 203, 177);
+    background: rgb(249, 248, 248);
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+}
+
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    /* background: linear-gradient(45deg, #eae6e6, #0b0a0a,#a59e9e,#f0cfcf); */
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 200%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.glow-on-hover:active {
+    color: rgb(255, 253, 253)
+}
+
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+.glow-on-hover:hover:before {
+    opacity: 1;
+}
+
+.glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+.button {
+    height: 10px;
+  width: 100px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 10px;
+  text-transform: uppercase;
+  text-align: left;
+  letter-spacing: 1.2px;
+  font-weight: 200;
+  color: #03030a;
+  background: #f8f6f6;
+/* background: linear-gradient(90deg, rgba(129,230,217,1) 0%, rgba(79,209,197,1) 100%); */
+  border: none;
+ 
+  /* box-shadow: 12px 12px 24px rgba(15, 16, 16, 0.64); */
+  transition: all 0.3s ease-in-out 0s;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+  padding: 10px;
+  }
+
+/* button::before {
+content: '';
+  border-radius: 50px;
+  min-width: calc(100px + 12px);
+  min-height: calc(60px + 12px);
+  border: 6px solid #00FFCB;
+  box-shadow: 0 0 60px rgba(0,255,203,.64);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: all .3s ease-in-out 0s;
+} */
+
+.button:hover, .button:focus {
+  color: #313133;
+  transform: translateY(-6px);
+}
+
+button:hover::before, button:focus::before {
+  opacity: 1;
+}
+
+/* button::after {
+  content: '';
+  width: 30px; height: 30px;
+  border-radius: 100%;
+  border: 6px solid #e65e0f;
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: ring 1.5s infinite;
+} */
+
+button:hover::after, button:focus::after {
+  animation: none;
+  display: none;
+}
+
+/* .multi-bg {
+  width: 100px;
+  height: 100px;
+  background-image: url(firefox.png), url(bubbles.png), linear-gradient(to right, rgba(30, 75, 115, 1), rgba(255, 255, 255, 0));
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-position:
+    bottom right,
+    left,
+    right;
+} */
+
+
+
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+
+.para{
+font-family:Trebuchet MS;
+text-align: left;
+
+}
+.heading{
+    font-family: Trebuchet MS;
+    text-align:center;
+    font-size: 40px;
+}
+.fotter{
+    font-family: Trebuchet MS;
+    text-align:end;
+    font-size: 40px;
+}
+/* div {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  animation-name: example;
+  animation-duration: 4s;
+} */
+
+@keyframes example {
+  from {background-color: rgb(143, 136, 136);}
+  to {background-color: rgb(249, 249, 245);}
+}
+#button-6 {
+  position: center;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+#button-6 a {
+  position: center;
+  transition: all .45s ease-Out;
+}
+
+#spin {
+  width: 0;
+  height: 0;
+  opacity: 0;
+  left: 70px;
+  top: 20px;
+  transform: rotate(0deg);
+  background: rgb(78, 24, 24);
+  position: absolute;
+  transition: all .5s ease-Out;
+}
+
+#button-6:hover #spin {
+  width: 200%;
+  height: 500%;
+  opacity: 1;
+  left: -70px;
+   top: -70px;
+  /* background: #060606ee; */
+  transform: rotate(80deg);
+}
+
+#button-6:hover a {
+  color: #fcf9f9;
+}
+@media screen and (min-width:1000px) {
+  h1 {
+    font-size: 2.2em;
+  }
+  #container {
+    width: 50%;
+  }
+}
+            
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1 class="heading">Welcome to chanel PMO Website</h1>
+        </div>
+        
+  <!-- <div class="button" id="button-6">
+    <div id="spin"></div> -->
+    <a href="https://barathmagendran.github.io/myStaticPage.github.io/" class="button">Let's Go!</a>
+  <!-- </div> -->
+    </body>
+    <footer>
+        <p>Version:1.1</p>
+        
+      </footer>
+</html>
